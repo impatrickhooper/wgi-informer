@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Offices
+   ========================================================================== */
+
+/* Styles for the Offices page */
+#offices {
+  height: 70vh; // Fallback height, overridden by JavaScript
+  position: relative;
+
+  /* Adjust leafleft z-index */
+  .leaflet-top,
+  .leaflet-bottom {
+    z-index: 997;
+  }
+
+  /* Adjust font styles of popup content */
+  .leaflet-popup-content {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    line-height: 1.5;
+
+    /* Marker title font size */
+    .marker-title {
+      font-size: 1.5em;
+    }
+  }
+
+  /* Styles for the map */
+  #map {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    /* Marker description link is green */
+    .marker-description a {
+      color: $wgi_green;
+    }
+  }
+
+  /* Styles for the divisions filter */
+  #divisions {
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom-left-radius: 0.25em;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    /* Styles for a paragraph and label in the filter */
+    p {
+      margin: 0;
+
+      label {
+        color: $white;
+      }
+    }
+
+    /* Hide the filter on small devices */
+    @include breakpoint($mq_small) {
+      display: none;
+    }
+  }
+}

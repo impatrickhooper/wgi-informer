@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Navigation | Main Navigation
+   ========================================================================== */
+
+/* Styles for Main Nav bar (using Materialize) */
+.main-navigation {
+  background-color: $wgi_green;
+  height: 64px;
+  line-height: 64px;
+
+  /* Main nav link styles */
+  a,
+  a:active,
+  a:hover,
+  a:visited {
+    color: $white;
+    opacity: 1;
+    padding: 0;
+  }
+
+  /* Give some padding to the wrapper */
+  .nav-wrapper {
+    padding-right: 0.25em;
+
+    /* Styles for small devices */
+    @include breakpoint($mq_small) {
+      padding-left: 0.25em;
+    }
+  }
+
+  /* Styles for right navigation (spotlight, favorites, menu) */
+  .right {
+
+    /* Styles for each right nav item */
+    li {
+      background-color: transparent;
+      height: 64px;
+      opacity: 0.75;
+      text-align: center;
+      width: 64px;
+
+      /* Styles for small devices */
+      @include breakpoint($mq_small) {
+        height: 48px;
+        width: 48px;
+      }
+
+      /* Full opacity on hover */
+      &:hover {
+        opacity: 1;
+      }
+
+      /* Hide Spotlight icon on small devices */
+      &.nav_spotlight {
+        @include breakpoint($mq_small) {
+          display: none;
+        }
+      }
+    }
+
+    /* Size and line up Spotlight, Favorites, menu links */
+    a {
+      display: inline-block !important;
+      height: 48px;
+      width: 48px;
+
+      &.button-collapse {
+        float: none;
+        line-height: 1;
+      }
+    }
+
+    /* Size and line up Spotlight, Favorites, menu icons */
+    i {
+      display: inline-block;
+      font-size: 2em;
+      height: 32px;
+      line-height: 1;
+      margin: 0.25em;
+      width: 32px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+/* Styles for cards (using Materialize) */
+.card {
+  margin: 0;
+
+  /* Make images fluid: no wider than width of container and auto adjust height */
+  .card-image img {
+    float: left;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Styles for card titles */
+  .card-title,
+  .card-content .card-title {
+    color: $text_gray;
+    font-size: 1.25em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for card reveals */
+  .card-reveal {
+
+    /* Styles for "x" that closes card reveal */
+    .card-title {
+      opacity: 0.75;
+
+      /* Full opacity on hover */
+      &:hover {
+        opacity: 1;
+      }
+
+      /* On touch devices, make full opacity */
+      .touch & {
+        opacity: 1;
+      }
+    }
+
+    .p1 {
+      clear: both;
+    }
+  }
+}

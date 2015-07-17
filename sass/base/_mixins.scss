@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/**
+ * Clearfix
+ *
+ * Output content using an after psuedo element to force-clear floated children
+ */
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/**
+ * Vertical align
+ *
+ * Position an element in the middle of its parent
+ */
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Unsemantic Grid System
+   ========================================================================== */
+
+/* Import other grid partials */
+@import "partials/unsemantic-grid-responsive-tablet";
+
+/* Alternative grid container that takes up entire width of page and has no padding */
+.grid-container-full {
+  max-width: 100%;
+
+  &_no-padding {
+    padding: 0;
+  }
+}

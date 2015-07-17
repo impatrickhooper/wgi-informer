@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Home | News
+   ========================================================================== */
+
+/* Styles for the News section of the Home page */
+#home {
+  #news .card-grid {
+
+    /* On medium devices, hide > 6 articles */
+    &:nth-of-type(n+7) {
+      @include breakpoint($mq_medium) {
+        display: none;
+      }
+    }
+
+    /* On small devices, hide > 4 articles */
+    &:nth-of-type(n+5) {
+      @include breakpoint($mq_small) {
+        display: none;
+      }
+    }
+  }
+}

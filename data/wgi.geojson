@@ -1,0 +1,190 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -81.703233,
+          30.118618
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Jacksonville",
+        "description": "4371 U.S. Highway 17 South<br>Suite 203<br>Fleming Island, FL 32003<br>Tel: 904.470.4503 | Fax: 904.470.4504<br><a href='https://www.google.com/maps/dir//4371+U.S.+Highway+17+South+Suite+203/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "creative", "structures", "utilities", "landscape-architecture"],
+        "marker-color": "#66BBEF",
+        "marker-size": "large",
+        "marker-symbol": "j"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -80.1912898,
+          26.1885639
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Fort Lauderdale",
+
+        "description": "5219 NW 33 Avenue<br>Fort Lauderdale, FL 33309<br>Tel: 954.660.1660<br><a href='https://www.google.com/maps/dir//5129+NW+33rd+Ave,+Fort+Lauderdale,+FL+33309/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "structures"],
+        "marker-color": "#EDED6A",
+        "marker-size": "large",
+        "marker-symbol": "f"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -81.5832563,
+          28.5623818
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Orlando",
+
+        "description": "213 South Dillard Street<br>Suite 210<br>Winter Garden, FL 34787<br>Tel: 407.581.1221 | Fax: 407.581.1222<br><a href='https://www.google.com/maps/dir//213+South+Dillard+Street+Suite+210+Winter+Garden,+FL+34787/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "survey", "creative", "utilities", "environmental"],
+        "marker-color": "#BEA9F5",
+        "marker-size": "large",
+        "marker-symbol": "o"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -80.410073,
+          27.3316237
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Port St. Lucie",
+        "description": "548 Mercantile Place<br>Port St. Lucie, FL 34986<br>Tel: 772.408.5258 | Fax: 772.408.5254<br><a href='https://www.google.com/maps/dir//548+Mercantile+Place+Port+St.+Lucie,+FL+34986/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["survey"],
+        "marker-color": "#444444",
+        "marker-size": "large",
+        "marker-symbol": "p"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -84.23942,
+          30.480084
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Tallahassee",
+
+        "description": "2260 Wednesday Street<br>Suite 100<br>Tallahassee, FL 32308<br>Tel: 850.210.0101 | Fax: 855.856.3577<br><a href='https://www.google.com/maps/dir//2260+Wednesday+Street+Suite+100+Tallahassee,+FL+32308/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "sue", "survey", "utilities"],
+        "marker-color": "#FFC886",
+        "marker-size": "large",
+        "marker-symbol": "t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -82.4964465,
+          27.982707
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "Tampa",
+
+        "description": "3111 W. Dr. Martin Luther King Jr. Boulevard<br>Suite 375<br>Tampa, FL 33607<br>Tel: 813.574.3190 | Fax: 813.574.3191<br><a href='https://www.google.com/maps/dir//3111+W.+Dr.+Martin+Luther+King+Jr.+Boulevard+Suite+375+Tampa,+FL+33607/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "survey", "structures", "utilities"],
+        "marker-color": "#FD99A0",
+        "marker-size": "large",
+        "marker-symbol": "t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -80.147486,
+          26.709534
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "West Palm Beach (Annex)",
+        "description": "2047 Vista Parkway<br>Suite 200<br>West Palm Beach, FL 33411<br>Tel: 561.687.2220 | Fax: 561.687.1110<br><a href='https://www.google.com/maps/dir//2047+Vista+Parkway+Suite+200+West+Palm+Beach,+FL+33411/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["civil", "environmental", "utilities"],
+        "marker-color": "#66D09B",
+        "marker-size": "large",
+        "marker-symbol": "w"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -80.148008,
+          26.710238
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "West Palm Beach (Corporate)",
+        "description": "2035 Vista Parkway<br>West Palm Beach, FL 33411<br>Tel: 561.687.2220 | Fax: 561.687.1110<br><a href='https://www.google.com/maps/dir//2035+Vista+Parkway+West+Palm+Beach,+FL+33411/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["roadway", "survey", "sue", "creative"],
+        "marker-color": "#66D09B",
+        "marker-size": "large",
+        "marker-symbol": "w"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -80.1010226,
+          26.7091405
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "West Palm Beach (East)",
+        "description": "400 Columbia Drive<br>Suite 110<br>West Palm Beach, FL 33409<br>Tel: 561.478.8501 | Fax: 561.478.5012<br><a href='https://www.google.com/maps/dir//400+Columbia+Drive+Suite+110+West+Palm+Beach,+FL+33409/@26.6819367,-80.1307057,14z' target='_blank'>Get Directions</a>",
+        "divisions": ["civil", "planning", "transportation-planning", "landscape-architecture"],
+        "marker-color": "#66D09B",
+        "marker-size": "large",
+        "marker-symbol": "w"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -80.2282421,
+          26.7098656
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "West Palm Beach (West)",
+        "description": "1402 Royal Palm Beach Boulevard<br>Building 200<br>Royal Palm Beach, FL 33411<br>Tel: 561.686.3660 | Fax: 561.791.1995<br><a href='https://www.google.com/maps/dir//1402+Royal+Palm+Beach+Blvd.++Bldg.+200++Royal+Palm+Beach,+FL+33411/@26.7067434,-80.1484298,15z' target='_blank'>Get Directions</a>",
+        "divisions": ["structures"],
+        "marker-color": "#66D09B",
+        "marker-size": "large",
+        "marker-symbol": "w"
+      }
+    }
+  ]
+}
+

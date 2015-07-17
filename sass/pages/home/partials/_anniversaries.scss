@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Home | Anniversaries
+   ========================================================================== */
+
+/* Styles for Anniversaries section of the Home page */
+#home {
+  #anniversaries {
+    padding-left: 0.75em;
+
+    /* No left padding on small devices */
+    @include breakpoint($mq_small) {
+      padding-left: 0;
+    }
+
+    /* Link styles for Anniversaries */
+    a {
+      color: $text_gray;
+      display: block;
+      font-weight: 300;
+
+      /* Slightly transparent on hover */
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    /* Styles for an person in the Anniversaries */
+    .anniversaries-grid .anniversary-person {
+
+      /* Clear every 5th person */
+      &:nth-of-type(4n+5) {
+        clear: both;
+
+        /* Don't clear 5th person on all devices but large ones */
+        @include breakpoint($mq_not_large) {
+          clear: none;
+        }
+      }
+
+      /* Clear every 4th person on all devices but large ones */
+      &:nth-of-type(3n+4) {
+        @include breakpoint($mq_not_large) {
+          clear: both;
+        }
+      }
+    }
+
+    /* Styles for a person */
+    .anniversary-person {
+      font-size: 0.75em;
+      padding: 0.75em;
+      text-align: center;
+
+      /* Make an image round */
+      &_photo img {
+        border-radius: 50%;
+      }
+
+      /* Italicize the number of years worked */
+      &_years {
+        font-style: italic;
+      }
+    }
+  }
+}

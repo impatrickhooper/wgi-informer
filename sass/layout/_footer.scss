@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+/* Styles for the Spotlight section */
+#spotlight {
+
+  /* Remove max height */
+  max-height: none;
+
+  /* Hide Spotlight on small devices */
+  @include breakpoint($mq_small) {
+    display: none !important;
+  }
+
+  /* Remove content in before pseudo-element */
+  .spotlight_content:before {
+    content: none;
+  }
+
+  /* Styles for the "x" that closes the Spotlight modal */
+  .mdi-navigation-close {
+    height: auto;
+    line-height: inherit;
+    width: auto;
+  }
+
+  /* Styles for h2 in Spotlight section */
+  h2 {
+    margin: 0.25em 0;
+    text-align: center;
+  }
+
+  /* Slight right margin for Spotlight Font Awesome icons */
+  .fa {
+    margin-right: 0.25em;
+  }
+
+  /* Give cards in the Spotlight section some padding */
+  .card-grid {
+    padding: 0.75em;
+  }
+
+  /* Make card image slightly transparent on hover */
+  .card-image:hover {
+    opacity: 0.5;
+
+    /* Full opacity on touch devices */
+    .touch & {
+      opacity: 1;
+    }
+  }
+
+  /* Styles for card content */
+  .card-content {
+    border-left: 6px solid $palette_green;
+
+    /* Show ellipsis when card paragraph is longer than width */
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+  }
+}

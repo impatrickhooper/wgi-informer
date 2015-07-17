@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Home | Birthdays
+   ========================================================================== */
+
+/* Styles for Birthdays section on Home page */
+#home {
+  #birthdays {
+    border-right: 1px solid #ccc;
+    padding-right: 0.75em;
+
+    /* No right border or padding on small devices */
+    @include breakpoint($mq_small) {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    /* Styles for links in Birthdays section */
+    a {
+      color: $text_gray;
+      display: block;
+      font-weight: 300;
+
+      /* Slightly transparent on hover */
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    /* Styles for a person in the Birthdays section */
+    .birthdays-grid .birthday-person {
+
+      /* Clear every 5th person */
+      &:nth-of-type(4n+5) {
+        clear: both;
+
+        /* Don't clear every 5th person on all but large devices */
+        @include breakpoint($mq_not_large) {
+          clear: none;
+        }
+      }
+
+      /* Clear every 4th person on all but large devices */
+      &:nth-of-type(3n+4) {
+        @include breakpoint($mq_not_large) {
+          clear: both;
+        }
+      }
+    }
+
+    /* Styles for a person */
+    .birthday-person {
+      font-size: 0.75em;
+      padding: 0.75em;
+      text-align: center;
+
+      /* Make image rounded */
+      &_photo img {
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Home | Photos
+   ========================================================================== */
+
+/* Styles for Photos section on Home page */
+#home {
+  #photos .card-grid {
+
+    /* On all but large devices, hide > 4 albums */
+    &:nth-of-type(n+5) {
+      @include breakpoint($mq_not_large) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Home | Events
+   ========================================================================== */
+
+/* Styles for Events section on the Home page */
+#home {
+
+  /* If this is the only event, don't float it and center it */
+  #events .card-grid:only-child {
+    float: none;
+    margin: 0 auto;
+  }
+}

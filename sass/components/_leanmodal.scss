@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Lean Modal
+   ========================================================================== */
+
+/* Styles for lean modal overlay (using Materialize) */
+#lean-overlay {
+
+  /* Hide on small devices */
+  @include breakpoint($mq_small) {
+    display: none !important;
+  }
+}

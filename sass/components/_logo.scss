@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+/* Styles for logo */
+nav .brand-logo {
+  height: 64px;
+  line-height: 64px;
+  max-width: 275px;
+  position: relative;
+
+  /* Styles for div that contains the logo svg/img */
+  div {
+    height: 0;
+    padding-bottom: 18.0776%; // Use padding hack for SVG elements
+    position: relative;
+    width: 100%;
+
+    /* SVG/img styles */
+    svg,
+    img {
+      left: 0;
+      margin-top: 7px;
+      position: absolute;
+      top: 0;
+
+      /* Move down on small devices */
+      @include breakpoint($mq_small) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  /* Adjustments on medium devices */
+  @include breakpoint($mq_medium) {
+    left: auto;
+    transform: none;
+  }
+
+  /* Adjustments on small devices */
+  @include breakpoint($mq_small) {
+    left: auto;
+    max-width: 200px;
+    transform: none;
+  }
+}

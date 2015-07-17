@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Navigation | Side Nav
+   ========================================================================== */
+
+/* Styles to darken Side Nav overlay and bring it above other elements */
+#sidenav-overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 998;
+}
+
+/* Styles for Side Nav (using Materialize) */
+.side-nav {
+  background-color: #f5f5f5;
+
+  /* Styles for the top part of the side nav */
+  &_top {
+    background-color: #444444;
+    padding: 0.75em 1.5em;
+    position: relative;
+
+    /**
+     * Set division-specific color for user
+     *
+     * 1. Loop through division colors map
+     * 2. Build selector based on division name
+     * 3. Give user background specific color based on division
+     */
+    @each $division, $color in $division_colors {
+      &.#{$division} {
+        background-color: $color;
+      }
+    }
+
+    /* Paragraph styles */
+    p {
+      color: $white;
+      line-height: 1;
+      margin: 0 0 0.25em;
+    }
+
+    /* Position sign out/profile links in top right corner */
+    &-links {
+      position: absolute;
+      right: 0.75em;
+      top: 0.75em;
+    }
+
+    /* Style the sign out/profile links */
+    .user-profile_link {
+      color: $white;
+      height: auto;
+      line-height: 1;
+      padding: 0;
+      text-align: center;
+
+      /* Make the icons a little bigger */
+      i {
+        font-size: 1.5em;
+        margin-bottom: 0.125em;
+      }
+
+      /* Make the text a little smaller */
+      span {
+        display: block;
+        font-size: 0.75em;
+      }
+    }
+
+    /* Give some breathing room below sign out link */
+    .user-profile_sign-out {
+      margin-bottom: 1em;
+    }
+
+    /* Styles for the user image */
+    .user-profile_img {
+      margin-bottom: 0.5em;
+
+      /* Round the image and float it left */
+      img {
+        border-radius: 50%;
+        float: left;
+        margin-bottom: 0.5em;
+        max-width: 100%;
+      }
+    }
+
+    /* Make the user's name a bit more bold */
+    .user-profile_name {
+      font-weight: 500;
+    }
+
+    /* Decrease the user's email a little */
+    .user-profile_email {
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+
+  /* Style the navigation menu */
+  &_menu {
+    margin: 0;
+
+    /* Styles for side nav items */
+    li {
+      padding: 0;
+
+      /* Invert colors on active menu item */
+      &.current-menu-item {
+        background-color: transparent !important;
+
+        a {
+          background-color: rgba(0, 0, 0, 0.05);
+          color: #000;
+        }
+      }
+
+      /* Remove default white background color */
+      & {
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    /* Side Nav link styles */
+    a,
+    a:visited {
+      color: $text_gray;
+      height: auto;
+      line-height: 1.5;
+      padding: 0.75em 1.5em;
+    }
+
+    /* On hover, make text white */
+    a:hover,
+    a:active {
+      color: $text_gray;
+      opacity: 1;
+      padding: 0.75em 1.5em;
+    }
+
+    /**
+     * Loop through main nav icon map
+     *
+     * 1. Build selector based on icon name and output icon in before psuedo element
+     * 2. Use .fa styles
+     * 3. Set content to content from map
+     * 4. Apply additional styles
+     */
+    @each $icon, $content in $mainNav_icons {
+      .main-nav_#{$icon} a:before {
+        @extend .fa;
+        content: "#{$content}";
+        display: inline-block;
+        font-size: 1.5em;
+        margin-right: 16px;
+        text-align: center;
+        width: 32px;
+      }
+    }
+  }
+}

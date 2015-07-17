@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+/* Styles for the main header (entry title) on a page */
+h1.entry-title {
+  margin: 2.1rem 0;
+  text-align: center;
+
+  /* Create the gray border after an entry title */
+  &:after {
+    content: '';
+    background-color: $heading_gray;
+    display: block;
+    height: 4px;
+    margin: 8px auto 0;
+    width: 72px;
+  }
+}
+
+/* Styles for a single post */
+.single-post {
+  margin: 0 auto;
+  max-width: 60rem;
+
+  /* Styles for article content */
+  .article-content {
+    margin-top: 1.5em;
+
+    /* Styles for the date published (everything but events) */
+    .published-date {
+      border-right: 1px solid $text_gray;
+      float: left;
+      margin-right: 0.75em;
+      padding-right: 0.75em;
+      text-align: center;
+
+      /* Styles for the month of the date published */
+      &_month {
+        color: $text_gray;
+        font-weight: 400;
+        line-height: 1;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+      }
+
+      /* Styles for the year of the date published */
+      &_year {
+        color: $text_gray;
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
+  }
+
+  /* Styles for entry content on Events post type */
+  &.type-events .entry-content {
+
+    /* Styles for event details */
+    .event_details {
+      margin: 1.5em 0;
+      text-align: center;
+
+      /* Styles for the date and time of the event */
+      &-datetime {
+        margin-bottom: 0.25em;
+      }
+
+      /* Styles for bold text in the details */
+      strong {
+        display: block;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  /* Center the images in a post */
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Constrain width of and center align content on 404 page */
+.error-404,
+.not-found {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center;
+}

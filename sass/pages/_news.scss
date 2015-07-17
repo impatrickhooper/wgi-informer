@@ -1,0 +1,55 @@
+/* ==========================================================================
+   News
+   ========================================================================== */
+
+/* Styles for News page */
+#news {
+
+  /* Styles for the "x" that closes a card reveal */
+  .mdi-navigation-close {
+    height: auto;
+    line-height: inherit;
+    width: auto;
+  }
+
+  /* Slight right margin for Font Awesome icons */
+  .fa {
+    margin-right: 0.25em;
+  }
+
+  /* Give some padding to a News card */
+  .card-grid {
+    padding: 0.75em;
+
+    /* On small devices, remove padding on left and right */
+    @include breakpoint($mq_small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  /* Styles for a News card on small devices */
+  .card {
+
+    /* Give max width and center via margins */
+    @include breakpoint($mq_small) {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  /* When hovering over an image, make slightly transparent */
+  .card-image:hover {
+    opacity: 0.5;
+
+    /* Full opacity on touch devices */
+    .touch & {
+      opacity: 1;
+    }
+  }
+
+  /* Green left border for a News card */
+  .card-content {
+    border-left: 6px solid $palette_green;
+  }
+}

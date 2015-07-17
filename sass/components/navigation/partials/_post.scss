@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Navigation | Post Navigation
+   ========================================================================== */
+
+/* Styles for Post Navigation */
+.navigation.post-navigation {
+  font-size: 1.125em;
+  margin: 1.5em auto 0;
+  max-width: 960px;
+
+  /* Apply clearfix to post navigation */
+  &:after {
+    @extend .clearfix;
+  }
+
+  /* Next link styles  */
+  .nav-next {
+    float: left;
+
+    /* Give right arrow icon and some layout styles */
+    a:before {
+      content: "\e893";
+      font-family: "Material-Design-Icons";
+      margin-right: 0.25em;
+      vertical-align: middle;
+    }
+  }
+
+  /* Previous link styles */
+  .nav-previous {
+    float: right;
+
+    /* Give left arrow icon and some layout styles */
+    a:after {
+      content: "\e897";
+      font-family: "Material-Design-Icons";
+      margin-left: 0.25em;
+      vertical-align: middle;
+    }
+  }
+}

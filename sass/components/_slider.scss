@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+
+/* Styles for slider (using Materialize) */
+.slider {
+  &,
+  .slides {
+    height: 600px !important;
+
+    /* Reduce height on small devices */
+    @include breakpoint($mq_small) {
+      height: 350px !important;
+    }
+
+    /* Styles for items in the slider */
+    li {
+      text-align: center;
+
+      /* Constrain image to 1920px wide */
+      img {
+        max-width: 1920px;
+        width: 1920px;
+
+        /* Constraint changes to 1120px on small devices */
+        @include breakpoint($mq_small) {
+          max-width: 1120px;
+          width: 1120px;
+        }
+      }
+    }
+  }
+
+  /* Styles for slider captions */
+  .caption {
+    top: 25% !important;
+
+    /* Move left and up on small devices and make wider */
+    @include breakpoint($mq_small) {
+      left: 5% !important;
+      top: 10% !important;
+      width: 90% !important;
+    }
+
+    /* Styles for the slide title */
+    &_title {
+      color: $white;
+      line-height: 1;
+      text-transform: uppercase;
+
+      /* Smaller font size on small devices */
+      @include breakpoint($mq_small) {
+        font-size: 2rem;
+      }
+    }
+
+    /* Styles for the slider tagline */
+    &_tagline {
+      color: $white;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    /* Styles for slider links/buttons */
+    &_link {
+      background-color: rgba(255, 255, 255, 0.25);
+      border: 2px solid $white;
+      border-radius: 0.25em;
+      color: $white;
+      display: inline-block;
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-top: 0.75em;
+      padding: 0.75em 1.5em;
+      text-transform: uppercase;
+
+      .fa {
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  /* Styles for slider indicators/navigation */
+  .indicators {
+    bottom: 8px;
+    z-index: 2;
+
+    /* Turn indicators into rectangles rather than circles */
+    .indicator-item {
+      background-color: $white;
+      border-radius: 0;
+      height: 8px;
+      width: 48px;
+
+      /* Active indicator is green */
+      &.active {
+        background-color: $wgi_green;
+      }
+    }
+  }
+}

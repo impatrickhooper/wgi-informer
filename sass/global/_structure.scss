@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Structure
+   ========================================================================== */
+
+/* Implement border-box sizing on all elements so they take up their assigned space */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Make images fluid: no wider than their container and auto adjust height to width */
+img {
+  max-width: 100%;
+  height: auto;
+}

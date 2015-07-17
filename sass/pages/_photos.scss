@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Photos
+   ========================================================================== */
+
+/* Styles for the Photos page */
+#photos {
+
+  /* Constrain photo card grid container on small devices and center via margins */
+  .card-grid-container {
+    @include breakpoint($mq_small) {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Give some padding to photo card */
+  .card-grid {
+    padding: 0.25em;
+
+    /* Constrain photo card to max of 240px on small devices */
+    @include breakpoint($mq_small) {
+      max-width: 240px;
+    }
+
+    /* Styles for photo card links */
+    a {
+
+      /* Full opacity on hover */
+      &:hover {
+        opacity: 1;
+
+        /* Slightly scale the image on hover over 0.5s */
+        .card-image img {
+          transform: scale(1.125);
+          transition: all 0.5s ease-in-out;
+
+          /* On touch devices, don't scale the image */
+          .touch & {
+            transform: scale(1);
+          }
+        }
+
+        /* Fade out the overlay on hover over 0.5s */
+        .card-image:after {
+          opacity: 0;
+          transition: all 0.5s;
+
+          /* On touch devices, don't fade out overlay */
+          .touch & {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    /* Styles for a photo card image */
+    .card-image{
+
+      /* Styles for the image overlay */
+      &:after {
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        transition: all 0.5s;
+        top: 0;
+        z-index: 1;
+      }
+
+      /* Default transition for a photo card image */
+      img {
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    /* Styles for a photo card title */
+    .card-title {
+      color: $white;
+      font-size: 1.125em;
+      margin: 0;
+      margin-bottom: 0.25em;
+      padding: 0 0.25em;
+      z-index: 2;
+    }
+  }
+}

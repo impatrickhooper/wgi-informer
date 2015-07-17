@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Events
+   ========================================================================== */
+
+/* Styles for Events page */
+#events {
+
+  /* Give event cards some padding */
+  .card-grid {
+    padding: 0.75em;
+
+    /* No left and right padding on small devices */
+    @include breakpoint($mq_small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  /* Styles for an event card */
+  .card {
+    border-left: 6px solid $palette_orange;
+    color: $text_gray;
+    cursor: pointer;
+    display: block;
+    font-weight: 300;
+
+    /* On small devices, center align text */
+    @include breakpoint($mq_small) {
+      text-align: center;
+    }
+
+    /* Blue left border for contest events */
+    &.contest {
+      border-left: 6px solid $palette_blue;
+    }
+
+    /* Styles for the left part of an event card */
+    .card-left {
+      position: relative;
+
+      /* Center align text on small devices */
+      @include breakpoint($mq_small) {
+        text-align: center;
+      }
+
+      /* Styles for the date of a card */
+      .card-date {
+        padding-left: 25%;
+        transform: translateY(25%);
+
+        /* Adjust left padding on medium devices */
+        @include breakpoint($mq_medium) {
+          padding-left: 1.5em;
+        }
+
+        /* Adjust styles on small devices */
+        @include breakpoint($mq_small) {
+          padding-left: 0;
+          padding-top: 0.75em;
+          transform: translateY(0%);
+        }
+
+        /* Styles for a part of a date for an event card */
+        &_part {
+          color: $heading_gray;
+          font-weight: 400;
+          line-height: 1;
+
+          /* Font size for the day */
+          &.day {
+            font-size: 2.5rem;
+          }
+
+          /* Font styles for the month */
+          &.month {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+          }
+
+          /* Font size for the year */
+          &.year {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    /* Styles for the middle section of an event card */
+    .card-middle {
+      padding-left: 0.5em;
+
+      /* Make full width on small devices */
+      @include breakpoint($mq_small) {
+        float: none;
+        padding: 0 1.5em;
+        width: 100%;
+      }
+
+      /* Styles for an event card title */
+      .card-title {
+        color: $heading_gray;
+        font-size: 1.375em;
+        font-weight: 400;
+      }
+
+      /* Margin for time and location */
+      .card-time,
+      .card-location {
+        margin: 0.5em 0;
+      }
+
+      /* On medium devices and up, show ellipsis if title, time, location beyond width */
+      .card-title,
+      .card-time,
+      .card-location {
+        @media (min-width: $medium_min) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-wrap: normal;
+        }
+      }
+    }
+
+    /* Styles for the right section of an event card */
+    .card-right {
+
+      /* Hide photo on small devices */
+      @include breakpoint($mq_small) {
+        display: none;
+      }
+
+      /* Image styles: make fluid, make at least 126px tall */
+      img {
+        float: left;
+        height: auto;
+        max-width: 100%;
+        min-height: 126px;
+      }
+    }
+  }
+}

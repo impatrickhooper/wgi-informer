@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Home | New Employees
+   ========================================================================== */
+
+/* Styles for New Employees section of the Home page */
+#home {
+  #new-employees {
+    margin-bottom: 1.5em;
+
+    /* Styles for the Ultimate Member directory */
+    .um-directory {
+      margin-bottom: 0;
+
+      /* Pull the directory upwards on small devices */
+      @include breakpoint($mq_small) {
+        margin-bottom: -3em !important;
+      }
+    }
+  }
+}
