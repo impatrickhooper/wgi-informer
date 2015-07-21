@@ -187,7 +187,7 @@ function photos_post_type() {
 }
 
 /*
- * Announcements post type
+ * Resources post type
  *
  * Supports a title and the editor by default
  * Is not public (so no link to page created)
