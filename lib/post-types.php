@@ -36,6 +36,8 @@ function announcements_post_type() {
     'show_ui'             => true,
     'menu_position'       => 30,
     'menu_icon'           => 'dashicons-megaphone',
+    'capability_type'     => array('announcement', 'announcements'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('announcements', $args);
@@ -73,6 +75,8 @@ function events_post_type() {
     'show_in_nav_menus'   => false,
     'menu_position'       => 31,
     'menu_icon'           => 'dashicons-calendar-alt',
+    'capability_type'     => array('event', 'events'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('events', $args);
@@ -109,6 +113,8 @@ function favorites_post_type() {
     'show_ui'             => true,
     'menu_position'       => 32,
     'menu_icon'           => 'dashicons-star-filled',
+    'capability_type'     => array('favorite', 'favorites'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('favorites', $args);
@@ -145,6 +151,8 @@ function news_post_type() {
     'show_in_nav_menus'   => false,
     'menu_position'       => 33,
     'menu_icon'           => 'dashicons-pressthis',
+    'capability_type'     => array('article', 'news'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('news', $args);
@@ -181,6 +189,8 @@ function photos_post_type() {
     'show_ui'             => true,
     'menu_position'       => 34,
     'menu_icon'           => 'dashicons-format-image',
+    'capability_type'     => array('album', 'photos'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('photos', $args);
@@ -217,6 +227,8 @@ function resources_post_type() {
     'show_ui'             => true,
     'menu_position'       => 35,
     'menu_icon'           => 'dashicons-info',
+    'capability_type'     => array('division', 'resources'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('resources', $args);
@@ -253,7 +265,68 @@ function spotlights_post_type() {
     'show_ui'             => true,
     'menu_position'       => 36,
     'menu_icon'           => 'dashicons-lightbulb',
+    'capability_type'     => array('spotlight', 'spotlights'),
+    'map_meta_cap'        => true,
   );
 
   register_post_type('spotlights', $args);
+}
+
+/*
+ * Content Manager role
+ *
+ * Can read, delete posts, manage files, manage categories
+ */
+add_action('init', 'register_custom_roles', 0);
+function register_custom_roles() {
+ add_role('content_manager',
+          'Content Manager',
+          array(
+            'read'                => true,
+            'edit_posts'          => false,
+            'delete_others_posts' => true,
+            'delete_posts'        => true,
+            'publish_posts'       => false,
+            'upload_files'        => true,
+            'manage_categories'   => true,
+          )
+  );
+}
+
+/*
+ * Content Manager capabilities
+ *
+ * Let Content Manager manage custom post types
+ */
+add_action('admin_init','register_custom_capabilities', 999);
+function register_custom_capabilities() {
+
+  $content_types = array(
+    "announcement"  => "announcements",
+    "event"         => "events",
+    "favorite"      => "favorites",
+    "article"       => "news",
+    "album"         => "photos",
+    "division"      => "resources",
+    "spotlight"     => "spotlights"
+  );
+
+  foreach ($content_types as $key => $value) {
+    $roles = array('content_manager', 'editor', 'administrator');
+
+    foreach($roles as $the_role) {
+      $role = get_role($the_role);
+      $role->add_cap('read');
+      $role->add_cap('read_' . $key);
+      $role->add_cap('read_private_' . $value);
+      $role->add_cap('edit_' . $key);
+      $role->add_cap('edit_' . $value);
+      $role->add_cap('edit_others_' . $value);
+      $role->add_cap('edit_published_' . $value);
+      $role->add_cap('publish_' . $value);
+      $role->add_cap('delete_others_' . $value);
+      $role->add_cap('delete_private_' . $value);
+      $role->add_cap('delete_published_' . $value);
+    }
+  }
 }
