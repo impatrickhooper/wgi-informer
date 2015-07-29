@@ -39,6 +39,22 @@
   /* Give cards in the Spotlight section some padding */
   .card-grid {
     padding: 0.75em;
+
+    /* Clear every 5th card on large screens */
+    &:nth-of-type(4n+5) {
+      clear: both;
+
+      @include breakpoint($mq_not_large) {
+        clear: none;
+      }
+    }
+
+    /* Clear every 4th card on other screens screens */
+    &:nth-of-type(3n+4) {
+      @include breakpoint($mq_medium) {
+        clear: both;
+      }
+    }
   }
 
   /* Make card image slightly transparent on hover */

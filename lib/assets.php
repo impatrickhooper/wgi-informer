@@ -10,7 +10,7 @@ add_action('wp_enqueue_scripts', 'wgiinformer_scripts');
 function wgiinformer_scripts() {
 
   /* Load the stylesheet: handle name, stylesheet path, dependencies, version, media types */
-  wp_enqueue_style('wgiinformer-style', get_stylesheet_uri(), array(), '1.0.0', 'all');
+  wp_enqueue_style('wgiinformer-style', get_stylesheet_uri(), array(), '1.0.1', 'all');
 
   /* Load the script (app.js): handle name, script path, dependencies, version, load in footer */
   wp_enqueue_script('wgiinformer-script', get_stylesheet_directory_uri() . '/app.js', array('jquery'), '1.0.0', true);
