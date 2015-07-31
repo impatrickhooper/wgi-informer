@@ -6,7 +6,7 @@
 nav .brand-logo {
   height: 56px !important;
   line-height: 56px !important;
-  max-width: 225px;
+  max-width: 200px;
   position: relative;
 
   /* Styles for div that contains the logo svg/img */
@@ -20,13 +20,13 @@ nav .brand-logo {
     svg,
     img {
       left: 0;
-      margin-top: 6px;
+      margin-top: 9px;
       position: absolute;
       top: 0;
 
-      /* Move down on small devices */
+      /* Move up slightly on mobile */
       @include breakpoint($mq_small) {
-        margin-top: 8px;
+        margin-top: 12px;
       }
     }
   }
@@ -40,7 +40,7 @@ nav .brand-logo {
   /* Adjustments on small devices */
   @include breakpoint($mq_small) {
     left: auto;
-    max-width: 200px;
+    max-width: 175px;
     transform: none;
   }
 }
