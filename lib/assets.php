@@ -8,7 +8,7 @@
 /* Load theme assets (scripts and stylesheets) */
 add_action('wp_enqueue_scripts', 'wgiinformer_scripts');
 function wgiinformer_scripts() {
-  $asset_version = '1.0.2';
+  $asset_version = '1.0.3';
 
   /* Load the stylesheet: handle name, stylesheet path, dependencies, version, media types */
   wp_enqueue_style('wgiinformer-style', get_stylesheet_uri(), array(), $asset_version, 'all');
