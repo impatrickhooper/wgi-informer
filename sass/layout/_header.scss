@@ -2,9 +2,7 @@
    Header
    ========================================================================== */
 
-/* Make the height of the masthead 64px on small devices */
+/* Make the height of the masthead 56px */
 #masthead {
-  @include breakpoint($mq_small) {
-    height: 64px;
-  }
+  height: 56px !important;
 }

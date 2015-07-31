@@ -5,8 +5,8 @@
 /* Styles for Main Nav bar (using Materialize) */
 .main-navigation {
   background-color: $wgi_green;
-  height: 64px;
-  line-height: 64px;
+  height: 56px !important;
+  line-height: 56px !important;
 
   /* Main nav link styles */
   a,
@@ -34,7 +34,7 @@
     /* Styles for each right nav item */
     li {
       background-color: transparent;
-      height: 64px;
+      height: 56px;
       opacity: 0.75;
       text-align: center;
       width: 64px;
