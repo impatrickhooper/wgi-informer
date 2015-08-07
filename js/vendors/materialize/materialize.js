@@ -611,7 +611,7 @@ if ($) { Vel = $.Velocity } else { Vel = Velocity};
       $("body").append(overlay);
 
       var defaults = {
-        opacity: 0.5,
+        opacity: 0.85,
         in_duration: 350,
         out_duration: 250,
         ready: undefined,
