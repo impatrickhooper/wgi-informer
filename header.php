@@ -59,16 +59,12 @@
     ?>
 
     <header id="masthead" class="site-header navbar-fixed" role="banner">
+
+      <?php if (is_user_logged_in()): ?>
       <nav id="site-navigation" class="main-navigation" role="navigation">
         <div class="nav-wrapper grid-container grid-container-full">
 
-          <?php
-            /* Load the logo */
-            get_template_part('template-parts/content_wgiinformer', 'logo');
-
-            /* If the user is logged in, do stuff */
-            if (is_user_logged_in()):
-          ?>
+          <?php get_template_part('template-parts/content_wgiinformer', 'logo'); ?>
 
           <ul class="right">
             <li class="nav_spotlight">
@@ -77,21 +73,18 @@
             <li class="nav_favorites">
               <a href="#" class="dropdown-button waves-effect waves-circle" data-beloworigin="true" data-activates="favorites" title="Favorites"><i class="fa fa-star"></i></a>
 
-              <?php
-                /* Load the Favorites navigation */
-                get_template_part('template-parts/content_wgiinformer', 'favorites');
-              ?>
+              <?php get_template_part('template-parts/content_wgiinformer', 'favorites'); ?>
 
             </li><!-- .nav_favorites -->
             <li class="nav_navigation">
               <a href="#" data-activates="main-nav" class="button-collapse show-on-large waves-effect waves-circle"><i class="fa fa-bars" title="Navigation"></i></a>
             </li><!-- .nav_navigation -->
           </ul><!-- .right -->
-
-          <?php endif; ?>
-
         </div><!-- .nav-wrapper -->
       </nav><!-- #site-navigation -->
+
+      <?php endif; ?>
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
