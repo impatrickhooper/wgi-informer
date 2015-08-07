@@ -20,11 +20,17 @@
 
   /* Give some padding to the wrapper */
   .nav-wrapper {
-    padding-right: 0.25em;
+    padding-left: 1.5em;
+    padding-right: 0.5em;
 
-    /* Styles for small devices */
-    @include breakpoint($mq_small) {
-      padding-left: 0.5em;
+    /* On all but bigger than max-width screens, reduce left padding */
+    @include breakpoint($mq_all) {
+      padding-left: 1em;
+    }
+
+    /* On medium and large devices, remove padding */
+    @include breakpoint($mq_medium_large) {
+      padding-right: 0;
     }
   }
 
