@@ -5,6 +5,9 @@
 /* Styles for lean modal overlay (using Materialize) */
 #lean-overlay {
 
+  /* Darken overlay */
+  opacity: 0.85 !important;
+
   /* Hide on small devices */
   @include breakpoint($mq_small) {
     display: none !important;
