@@ -5,6 +5,14 @@
 /* Import other grid partials */
 @import "partials/unsemantic-grid-responsive-tablet";
 
+/* On screens bigger than the max width, remove padding on grid container */
+.grid-container {
+  @media (min-width: 75.0625rem) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 /* Alternative grid container that takes up entire width of page and has no padding */
 .grid-container-full {
   max-width: 100%;
