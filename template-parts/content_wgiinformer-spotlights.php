@@ -77,7 +77,7 @@
 
         <div class="card-image waves-effect">
 
-          <?php the_post_thumbnail('news-article-thumbnail', array('class' => 'activator no-lazy')); ?>
+          <?php the_post_thumbnail('news-article-thumbnail', array('class' => 'activator')); ?>
 
         </div><!-- .card-image -->
 
