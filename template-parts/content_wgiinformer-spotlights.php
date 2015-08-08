@@ -70,7 +70,7 @@
         }
     ?>
 
-    <div class="card-grid grid-25 tablet-grid-33 hide-on-mobile">
+    <div class="card-grid grid-25 tablet-grid-33 mobile-grid-100">
       <div class="card">
 
         <?php if($spotlight_thumbnail) : ?>
@@ -119,7 +119,7 @@
       wp_reset_postdata();
     ?>
 
-  </div><!-- #spotlight -->
+  </div><!-- #spotlights -->
 </div><!-- .wrapper.wrapper-spotlights -->
 
 <?php endif; ?>
