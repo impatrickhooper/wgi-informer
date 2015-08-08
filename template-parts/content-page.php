@@ -41,6 +41,9 @@
         case 16:
           $page_name = 'offices';
           break;
+        case 1077:
+          $page_name = 'spotlights';
+          break;
       }
 
       /* Check if a template part exists for this page name, and if it does, load it */
