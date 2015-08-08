@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: wgi.buzz
 Author URI: http://www.wantmangroup.com
 Description: A theme for the WGI intranet based off of _s starter theme.
-Version: 1.0.12
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wgiinformer
@@ -56,7 +56,6 @@ WGI Informer is based on Underscores http://underscores.me/, (C) 2012-2015 Autom
 @import "components/buttons";
 @import "components/slider";
 @import "components/cards";
-@import "components/collapsible";
 @import "components/typeform";
 @import "components/leanmodal";
 
@@ -68,4 +67,3 @@ WGI Informer is based on Underscores http://underscores.me/, (C) 2012-2015 Autom
 @import "pages/news";
 @import "pages/offices";
 @import "pages/photos";
-@import "pages/resources";

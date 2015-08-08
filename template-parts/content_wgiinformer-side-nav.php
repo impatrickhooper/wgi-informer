@@ -27,11 +27,11 @@
     <?php
       /* If there's a user photo, load it here */
       if ($user_profile_photo != '') {
-        echo '<p class="user-profile_img clearfix"><img src="' . site_url() . '/wp-content/uploads/ultimatemember/' . $user_profile_id . '/profile_photo-100.jpg"></p>';
+        echo '<p class="user-profile_img clearfix"><a href="' . site_url() . '/user"><img src="' . site_url() . '/wp-content/uploads/ultimatemember/' . $user_profile_id . '/profile_photo-100.jpg"></a></p>';
       }
       /* If no photo, use the default */
       else {
-        echo '<p class="user-profile_img clearfix"><img src="' . get_stylesheet_directory_uri() . '/img/profile_photo-default.jpg"></p>';
+        echo '<p class="user-profile_img clearfix"><a href="' . site_url() . '/user"><img src="' . get_stylesheet_directory_uri() . '/img/profile_photo-default.jpg"></a></p>';
       }
     ?>
 

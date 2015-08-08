@@ -308,12 +308,6 @@ if ($) { Vel = $.Velocity } else { Vel = Velocity};
        /****************
        Helper Functions
        ****************/
-        function materializeMasonryResources() {
-          $('#resources .card-grid-container').masonry({
-            itemSelector: '.card-grid',
-            percentPosition: true
-          });
-        }
 
       // Accordion Open
       function accordionOpen(object) {
@@ -325,10 +319,10 @@ if ($) { Vel = $.Velocity } else { Vel = Velocity};
             object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', ''); materializeMasonryResources();}});
+          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{
-          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', ''); materializeMasonryResources();}});
+          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
         }
 
         $panel_headers.not(object).removeClass('active').parent().removeClass('active');

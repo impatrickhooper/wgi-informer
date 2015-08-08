@@ -17,6 +17,8 @@
 
   <?php get_template_part('template-parts/content_wgiinformer', 'events'); ?>
 
+  <?php get_template_part('template-parts/content_wgiinformer', 'news'); ?>
+
   <div class="wrapper wrapper-new-employees">
     <div class="grid-container">
 
@@ -33,8 +35,6 @@
 
     </div><!-- .grid-container -->
   </div><!-- .wrapper.wrapper-new-employees -->
-
-  <?php get_template_part('template-parts/content_wgiinformer', 'news'); ?>
 
   <?php get_template_part('template-parts/content_wgiinformer', 'photos'); ?>
 

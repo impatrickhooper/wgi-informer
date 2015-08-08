@@ -38,14 +38,8 @@
         case 10:
           $page_name = 'photos';
           break;
-        case 12:
-          $page_name = 'resources';
-          break;
         case 16:
           $page_name = 'offices';
-          break;
-        case 906:
-          $page_name = 'wgi-files';
           break;
       }
 

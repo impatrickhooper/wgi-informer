@@ -114,15 +114,6 @@
     $(this).text($(this).text().replace(/\s\d{4}/g, ''));
   });
 
-  /* Resources
-  ========================================================================== */
-
-  /* Intialize masonry layout for Resources */
-  $('#resources .card-grid-container').masonry({
-    itemSelector: '.card-grid',
-    percentPosition: true
-  });
-
   /* Footer
   ========================================================================== */
 

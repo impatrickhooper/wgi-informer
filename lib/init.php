@@ -89,7 +89,6 @@ add_filter('show_admin_bar', '__return_false');
 add_filter('upload_mimes', 'custom_upload_mimes');
 function custom_upload_mimes ( $existing_mimes=array() ) {
   $existing_mimes['svg'] = 'mime/type';
-  $existing_mimes['eps'] = 'mime/type';
   return $existing_mimes;
 }
 
@@ -97,25 +96,4 @@ function custom_upload_mimes ( $existing_mimes=array() ) {
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
   return '<a class="more-link" href="' . get_permalink() . '">Read More...</a>';
-}
-
-/*
- * Custom rewrite rules for protecting WGI files
- *
- * 1. Add comment to block off this section of rules so it's clearly theme-related
- * 2. Turn on RewriteEngine if module exists
- * 3. For all uploads with provided extensions, redirect to resources page
- * 4. Pass query parameter with file name
- */
-add_filter('mod_rewrite_rules', 'wgiinformer_htaccess_rules');
-function wgiinformer_htaccess_rules( $rules ) {
-  $wgiinformer_rules = <<<EOD
-\n# BEGIN WGI Informer
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule ^wp-content/uploads/(.+\.(csv|doc|docx|eps|xls|xlsx|pdf|ppt|pptx|rtf|txt|xml))$ https://wgiinformer.com/resources/?wgi-file=$1 [QSA,L]
-</IfModule>
-# END WGI Informer\n\n
-EOD;
-  return $wgiinformer_rules . $rules;
 }
