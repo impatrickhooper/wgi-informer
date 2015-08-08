@@ -21,13 +21,18 @@
     content: ' ';
     height: 0;
     position: absolute;
-    right: 73px;
+    right: 78px;
     top: -20px;
     width: 0;
 
+    /* On screens smaller than the max width, change right */
+    @include breakpoint($mq_all) {
+      right: 70px;
+    }
+
     /* Move right some on small devices */
     @include breakpoint($mq_small) {
-      right: 49px;
+      right: 54px;
     }
   }
 
