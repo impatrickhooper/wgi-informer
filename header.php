@@ -58,32 +58,35 @@
       }
     ?>
 
-    <header id="masthead" class="site-header navbar-fixed" role="banner">
+    <header id="masthead" class="site-header" role="banner">
 
-      <?php if (is_user_logged_in()): ?>
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <div class="nav-wrapper grid-container grid-container-full">
+    <?php if (is_user_logged_in()): ?>
 
-          <?php get_template_part('template-parts/content_wgiinformer', 'logo'); ?>
+      <div class="navbar-fixed">
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <div class="nav-wrapper grid-container grid-container-full">
 
-          <ul class="right">
-            <li class="nav_spotlight">
-              <a href="#spotlight" class="spotlight-trigger waves-effect waves-circle" title="Spotlight"><i class="fa fa-lightbulb-o"></i></a>
-            </li><!-- .nav_spotlight -->
-            <li class="nav_favorites">
-              <a href="#" class="dropdown-button waves-effect waves-circle" data-beloworigin="true" data-activates="favorites" title="Favorites"><i class="fa fa-star"></i></a>
+            <?php get_template_part('template-parts/content_wgiinformer', 'logo'); ?>
 
-              <?php get_template_part('template-parts/content_wgiinformer', 'favorites'); ?>
+            <ul class="right">
+              <li class="nav_spotlight">
+                <a href="#spotlight" class="spotlight-trigger waves-effect waves-circle" title="Spotlight"><i class="fa fa-lightbulb-o"></i></a>
+              </li><!-- .nav_spotlight -->
+              <li class="nav_favorites">
+                <a href="#" class="dropdown-button waves-effect waves-circle" data-beloworigin="true" data-activates="favorites" title="Favorites"><i class="fa fa-star"></i></a>
 
-            </li><!-- .nav_favorites -->
-            <li class="nav_navigation">
-              <a href="#" data-activates="main-nav" class="button-collapse show-on-large waves-effect waves-circle"><i class="fa fa-bars" title="Navigation"></i></a>
-            </li><!-- .nav_navigation -->
-          </ul><!-- .right -->
-        </div><!-- .nav-wrapper -->
-      </nav><!-- #site-navigation -->
+                <?php get_template_part('template-parts/content_wgiinformer', 'favorites'); ?>
 
-      <?php endif; ?>
+              </li><!-- .nav_favorites -->
+              <li class="nav_navigation">
+                <a href="#" data-activates="main-nav" class="button-collapse show-on-large waves-effect waves-circle"><i class="fa fa-bars" title="Navigation"></i></a>
+              </li><!-- .nav_navigation -->
+            </ul><!-- .right -->
+          </div><!-- .nav-wrapper -->
+        </nav><!-- #site-navigation -->
+      </div>
+
+    <?php endif; ?>
 
     </header><!-- #masthead -->
 
