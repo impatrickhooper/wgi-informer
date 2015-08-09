@@ -1,7 +1,7 @@
 # WGI Informer
 Hi. I'm the theme for wgiinformer.com!
 
-### Current Version : v2.0.2
+### Current Version : v2.0.3
 
 ## Supported Browsers:
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
