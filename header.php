@@ -58,15 +58,18 @@
       }
     ?>
 
-    <header id="masthead" class="site-header" role="banner">
-
-    <?php if (is_user_logged_in()): ?>
-
-      <div class="navbar-fixed">
+    <header id="masthead" class="site-header navbar-fixed" role="banner">
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <div class="nav-wrapper grid-container grid-container-full">
 
-            <?php get_template_part('template-parts/content_wgiinformer', 'logo'); ?>
+            <?php
+
+              /* Get the logo */
+              get_template_part('template-parts/content_wgiinformer', 'logo');
+
+              /* If user is logged in, output the rest of the nav */
+              if (is_user_logged_in()):
+            ?>
 
             <ul class="right">
               <li class="nav_spotlight">
@@ -82,12 +85,11 @@
                 <a href="#" data-activates="main-nav" class="button-collapse show-on-large waves-effect waves-circle"><i class="fa fa-bars" title="Navigation"></i></a>
               </li><!-- .nav_navigation -->
             </ul><!-- .right -->
+
+            <?php endif; ?>
+
           </div><!-- .nav-wrapper -->
         </nav><!-- #site-navigation -->
-      </div>
-
-    <?php endif; ?>
-
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
