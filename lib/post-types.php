@@ -263,10 +263,23 @@ function register_custom_roles() {
 add_action('admin_init','register_custom_capabilities', 999);
 function register_custom_capabilities() {
 
+  /* Let administrator manage Favorites */
+  $role = get_role('administrator');
+  $role->add_cap('read');
+  $role->add_cap('read_favorite');
+  $role->add_cap('read_private_favorites');
+  $role->add_cap('edit_favorite');
+  $role->add_cap('edit_favorites');
+  $role->add_cap('edit_others_favorites');
+  $role->add_cap('edit_published_favorites');
+  $role->add_cap('publish_favorites');
+  $role->add_cap('delete_others_favorites');
+  $role->add_cap('delete_private_favorites');
+  $role->add_cap('delete_published_favorites');
+
   $content_types = array(
     "announcement"  => "announcements",
     "event"         => "events",
-    "favorite"      => "favorites",
     "article"       => "news",
     "album"         => "photos",
     "spotlight"     => "spotlights"
@@ -289,5 +302,22 @@ function register_custom_capabilities() {
       $role->add_cap('delete_private_' . $value);
       $role->add_cap('delete_published_' . $value);
     }
+  }
+
+  /* Let administrator manage Favorites */
+  $rem_roles = array('content_manager', 'editor');
+  foreach($rem_roles as $rem_role) {
+    $role = get_role($rem_role);
+    $role->remove_cap('read');
+    $role->remove_cap('read_favorite');
+    $role->remove_cap('read_private_favorites');
+    $role->remove_cap('edit_favorite');
+    $role->remove_cap('edit_favorites');
+    $role->remove_cap('edit_others_favorites');
+    $role->remove_cap('edit_published_favorites');
+    $role->remove_cap('publish_favorites');
+    $role->remove_cap('delete_others_favorites');
+    $role->remove_cap('delete_private_favorites');
+    $role->remove_cap('delete_published_favorites');
   }
 }
