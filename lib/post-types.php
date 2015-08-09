@@ -277,6 +277,7 @@ function register_custom_capabilities() {
   $role->add_cap('delete_private_favorites');
   $role->add_cap('delete_published_favorites');
 
+  /* Let content manager, editor, and administrator manage all other CPT */
   $content_types = array(
     "announcement"  => "announcements",
     "event"         => "events",
@@ -302,22 +303,5 @@ function register_custom_capabilities() {
       $role->add_cap('delete_private_' . $value);
       $role->add_cap('delete_published_' . $value);
     }
-  }
-
-  /* Let administrator manage Favorites */
-  $rem_roles = array('content_manager', 'editor');
-  foreach($rem_roles as $rem_role) {
-    $role = get_role($rem_role);
-    $role->remove_cap('read');
-    $role->remove_cap('read_favorite');
-    $role->remove_cap('read_private_favorites');
-    $role->remove_cap('edit_favorite');
-    $role->remove_cap('edit_favorites');
-    $role->remove_cap('edit_others_favorites');
-    $role->remove_cap('edit_published_favorites');
-    $role->remove_cap('publish_favorites');
-    $role->remove_cap('delete_others_favorites');
-    $role->remove_cap('delete_private_favorites');
-    $role->remove_cap('delete_published_favorites');
   }
 }
