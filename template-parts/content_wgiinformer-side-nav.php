@@ -22,7 +22,7 @@
     <?php
       /* If there's a user photo, load it here */
       if ($user_profile_photo != '') {
-        echo '<p class="user-profile_img"><a href="' . site_url() . '/user"><img src="' . $user_profile_photo . '"></a></p>';
+        echo '<p class="user-profile_img"><a href="' . site_url() . '/user"><img src="' . site_url() . '/wp-content/uploads/ultimatemember/' . $user_profile_id . '/profile_photo-100.jpg"></a></p>';
       }
       /* If no photo, use the default */
       else {
