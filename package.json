@@ -1,11 +1,11 @@
 {
   "name": "wgiinformer",
-  "version": "2.0.11",
-  "description": "Company intranet for Wantman Group, Inc.",
+  "version": "2.0.13",
+  "description": "A WordPress theme for the WGI intranet (https://wgiinformer.com).",
   "repository": {
     "type": "git"
   },
-  "author": "wgi.buzz",
+  "author": "Patrick Hooper (http://patrick.hoopr.io)",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",

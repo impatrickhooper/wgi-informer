@@ -1,7 +1,7 @@
 # WGI Informer
-Hi. I'm the theme for wgiinformer.com!
+A WordPress theme for the WGI intranet ([https://wgiinformer.com](https://wgiinformer.com)).
 
-### Current Version : v2.0.11
+### Current Version : v2.0.13
 
 ## Supported Browsers:
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
@@ -29,8 +29,12 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 - Unsemantic Grid System ([http://unsemantic.com/](http://unsemantic.com/))
 
 ## JavaScript Requirements
+- jQuery ([https://jquery.com/](https://jquery.com/))
 - Masonry ([http://masonry.desandro.com/](http://masonry.desandro.com/))
 - Materialize ([http://materializecss.com/](http://materializecss.com/))
 - Modernizr ([http://modernizr.com/](http://modernizr.com/))
 - SVG for Everybody ([https://github.com/jonathantneal/svg4everybody)](https://github.com/jonathantneal/svg4everybody)
 - Underscores Starter Theme ([http://underscores.me/](http://underscores.me/))
+
+## Contributors
+- Patrick Hooper ([http://patrick.hoopr.io](http://patrick.hoopr.io))
