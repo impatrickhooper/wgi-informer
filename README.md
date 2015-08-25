@@ -38,3 +38,4 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Contributors
 - Patrick Hooper ([http://patrick.hoopr.io](http://patrick.hoopr.io))
+- Marie Hooper ([http://marie.hoopr.io](http://marie.hoopr.io))
