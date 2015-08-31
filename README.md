@@ -30,6 +30,7 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## JavaScript Requirements
 - jQuery ([https://jquery.com/](https://jquery.com/))
+- Mapbox ([https://www.mapbox.com/](https://www.mapbox.com/))
 - Masonry ([http://masonry.desandro.com/](http://masonry.desandro.com/))
 - Materialize ([http://materializecss.com/](http://materializecss.com/))
 - Modernizr ([http://modernizr.com/](http://modernizr.com/))
