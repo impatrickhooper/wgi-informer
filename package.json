@@ -2,10 +2,23 @@
   "name": "wgi-informer",
   "version": "2.0.13",
   "description": "A WordPress theme for the WGI intranet (https://wgiinformer.com).",
-  "repository": {
-    "type": "git"
+  "homepage": "https://wgiinformer.com",
+  "author": {
+    "name": "Patrick Hooper",
+    "email": "patrick.d.hooper@gmail.com",
+    "url": "http://patrick.hoopr.io"
   },
-  "author": "Patrick Hooper (http://patrick.hoopr.io)",
+  "contributors": [
+    {
+      "name": "Marie Hooper",
+      "email": "marie.ashtari@gmail.com",
+      "url": "http://marie.hoopr.io"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/impatrickhooper/wgi-informer"
+  },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
